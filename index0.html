@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرستنا</title>
+    <link rel="stylesheet" href="index0.css">
+</head>
+
+<body>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="logo">🎓 مدرستنا</div>
+        <button class="menu-toggle" aria-label="فتح/إغلاق القائمة">☰</button>
+        <ul class="nav-links">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#vision">رؤيتنا</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <h1>مرحبًا بكم في <span>مدرستنا</span></h1>
+        <p>حيث يبدأ مستقبل الطلاب بخطوة ناجحة</p>
+    </section>
+
+    <!-- من نحن -->
+    <section id="about">
+        <h2>من نحن</h2>
+        <p>
+            نحن مدرسة عصرية تهدف إلى تقديم تعليم متطور وممتع للطلاب باستخدام أحدث الأساليب التعليمية والتكنولوجية. رؤيتنا هي بناء جيل واعٍ ومبدع.
+        </p>
+    </section>
+
+    <!-- الخدمات -->
+    <section id="services">
+        <h2>خدماتنا</h2>
+        <div class="service-cards">
+            <div class="card">📚 تعليم حديث</div>
+            <div class="card">💻 معامل تكنولوجيا</div>
+            <div class="card">⚽ أنشطة رياضية</div>
+            <div class="card">🎨 فنون وابتكار</div>
+        </div>
+    </section>
+
+    <!-- رؤيتنا -->
+    <section id="vision">
+        <h2>رؤيتنا</h2>
+        <p>
+            أن نكون مؤسسة تعليمية رائدة توفر بيئة إبداعية وآمنة، تساعد الطلاب على اكتشاف قدراتهم وبناء مستقبلهم بثقة.
+        </p>
+    </section>
+
+    <!-- تواصل معنا -->
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <p>📍 العنوان: القاهرة - مصر</p>
+        <p>📞 الهاتف: 01012345678</p>
+        <p>📧 البريد: school@email.com</p>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>© 2025 مدرستنا | جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+        // زرار الهمبرجر للموبايل
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            menuToggle.textContent = navLinks.classList.contains("active") ? "✖" : "☰";
+        });
+    </script>
+
+</body>
+
+</html>
