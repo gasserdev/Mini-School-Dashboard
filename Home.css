@@ -67,7 +67,7 @@ body {
 
 .hero {
     height: 90vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Screenshot 2025-09-21 193958.png") center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("school-logo.png") center/cover no-repeat;
     color: white;
     display: flex;
     flex-direction: column;
@@ -169,3 +169,4 @@ html {
     scroll-behavior: smooth;
 
 }
+
