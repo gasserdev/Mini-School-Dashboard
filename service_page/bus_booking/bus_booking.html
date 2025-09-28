@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حجز الباص المدرسي</title>
+    <link href="bus_booking.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>حجز الباص المدرسي</h1>
+
+        <div class="card">
+            <h2>نموذج حجز مقعد في الباص</h2>
+            <form>
+                <label for="student-name">اسم الطالب:</label>
+                <input type="text" id="student-name" required />
+
+                <label for="grade">الصف:</label>
+                <select id="grade" required>
+          <option value="">اختر الصف</option>
+          <option value="1">الصف الأول</option>
+          <option value="2">الصف الثاني</option>
+          <option value="3">الصف الثالث</option>
+          <option value="4">الصف الرابع</option>
+          <option value="5">الصف الخامس</option>
+          <option value="6">الصف السادس</option>
+        </select>
+
+                <label for="address">العنوان الكامل:</label>
+                <textarea id="address" rows="3" required></textarea>
+
+                <label for="pickup-time">وقت الصعود:</label>
+                <input type="time" id="pickup-time" required />
+
+                <label for="dropoff-time">وقت النزول:</label>
+                <input type="time" id="dropoff-time" required />
+
+                <div class="checkbox">
+                    <input type="checkbox" id="agree" required />
+                    <label for="agree">أوافق على الشروط والأحكام وسياسة الاستخدام</label>
+                </div>
+
+                <button type="submit">حجز مقعد الآن</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
