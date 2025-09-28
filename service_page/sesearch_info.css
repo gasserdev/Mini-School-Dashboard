@@ -1,0 +1,125 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    color: #333;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("school-logo.png") center/cover no-repeat;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #2980b9;
+    text-align: center;
+    margin-top: 0;
+}
+
+.search-box {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+.result-card {
+    background-color: #ecf0f1;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    border: 3px solid #2980b9;
+}
+
+.result-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.result-card th {
+    background-color: #2980b9;
+    color: white;
+    text-align: right;
+    padding: 12px;
+    width: 40%;
+}
+
+.result-card td {
+    text-align: right;
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.no-results {
+    text-align: center;
+    color: #e74c3c;
+    font-size: 18px;
+    padding: 20px;
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+    .card {
+        padding: 20px;
+    }
+    .profile-img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
+    .result-card th,
+    .result-card td {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+}
