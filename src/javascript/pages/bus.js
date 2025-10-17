@@ -16,7 +16,7 @@ export default function Bus() {
   const main = document.createElement('main');
   main.innerHTML = `
   <div class="container fw-bold mt-5 text-light mb-5">
-    <div id="particles-js" class="position-absolute top-0 start-0 w-100" style="height:125vh;z-index:-1;"></div>
+    <div id="particles-js" class="position-absolute top-0 start-0 w-100" style="height:130vh;z-index:-1;"></div>
 
     <div>
       <h1 class='text-center'>School Bus Booking</h1>

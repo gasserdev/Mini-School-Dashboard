@@ -12,7 +12,7 @@ export default function Login() {
   <div class="container">
       <div id="particles-js" class="position-absolute top-0 start-0 w-100 h-100" style="z-index:-1;"></div>
 
-      <div class="left text-center bg-primary">
+      <div class="left w-100 text-center bg-primary">
           <h1 class="center">Edu School</h1>
           <p>Where learning never ends</p>
       </div>

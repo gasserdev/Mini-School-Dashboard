@@ -31,5 +31,9 @@ page('/bus', async () => {
   await import("/src/javascript/pages/bus.js").then(module => module.default());
   Bus();
 });
-
+page('/search', async () => {
+  document.body.innerHTML = '';
+  await import("/src/javascript/pages/search.js").then(module => module.default());
+  Bus();
+});
 page();
