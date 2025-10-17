@@ -14,10 +14,17 @@ page('/contact', async () => {
   await import("/src/javascript/pages/contact.js").then(module => module.default());
   Contact();
 });
+
 page('/login', async () => {
   document.body.innerHTML = '';
   await import("/src/javascript/pages/login.js").then(module => module.default());
   Login();
+});
+
+page('/services', async () => {
+  document.body.innerHTML = '';
+  await import("/src/javascript/pages/services.js").then(module => module.default());
+  Services();
 });
 
 page();
