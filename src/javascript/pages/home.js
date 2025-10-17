@@ -3,7 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '/src/css/home.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+
 export default function Home() {
+  if (!sessionStorage.getItem('login_refreshed')) {
+    sessionStorage.setItem('login_refreshed', 'true');
+    location.reload();
+    return;
+  } else {
+    sessionStorage.removeItem('login_refreshed');
+  }
   document.body.innerHTML = '';
   document.body.prepend(Header());
 

@@ -4,6 +4,13 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '/src/css/contact.css';
 
 export default function Contact() {
+  if (!sessionStorage.getItem('login_refreshed')) {
+    sessionStorage.setItem('login_refreshed', 'true');
+    location.reload();
+    return;
+  } else {
+    sessionStorage.removeItem('login_refreshed');
+  }
   document.body.innerHTML = '';
   document.body.prepend(Header());
 
