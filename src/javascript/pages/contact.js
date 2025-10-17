@@ -1,7 +1,7 @@
 import Header from '../components/header.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '/src/css/contact.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import '/src/css/contact.css';
 
 export default function Contact() {
   document.body.innerHTML = '';
