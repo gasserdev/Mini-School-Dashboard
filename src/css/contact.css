@@ -15,9 +15,25 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   height: 100vh;
+  overflow-x: hidden !important;
+}
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+  z-index: -1;
 }
 
 
+/* footer {
+  position: absolute;;; /* أو static */
+  bottom: 0;
+  z-index: 1;
+  margin: 0 !important;
+  width: 100%;
+} */
 
 h2{
   margin:0 0 18px 0;

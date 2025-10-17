@@ -6,8 +6,10 @@ page('/', () => {
   document.body.innerHTML = '';
   Home();
 });
+
 page('/contact', () => {
   document.body.innerHTML = '';
   Contact();
 });
+
 page();

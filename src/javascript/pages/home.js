@@ -9,7 +9,7 @@ export default function Home() {
 
   const main = document.createElement('main');
   main.innerHTML = `
-    <section id="home" class="hero py-5 position-relative text-white">
+    <section id="home"  class="hero  py-5 position-relative text-white">
       <div id="particles-js" class="position-absolute top-0 start-0 w-100 h-100" style="z-index:0;"></div>
       <div class="container hero-content text-center position-relative" style="z-index:1;">
         <h1 class="display-5 fw-bold">Welcome to Edu School</h1>
@@ -19,8 +19,18 @@ export default function Home() {
         <a href="#about" class="cta-button btn btn-primary btn-lg">Learn More</a>
       </div>
     </section>
-  `;
+    <section id="about" class="section py-5 bg-light">
+        <div class="">
+            <h2 class="">About Our School</h2>
+            <p class="text-secondary">
+            Since its establishment, Edu School has been dedicated to providing a top-quality education that nurtures creativity, critical thinking, and personal growth.
+            Our teachers strive to create a supportive and inspiring environment where every student can reach their full potential.
+            We focus on academic excellence while promoting values such as respect, responsibility, and teamwork, preparing our students to succeed in the modern world.
+            </p>
+        </div>
+    </section>
 
+  `;
   document.body.append(main);
 
   if (!window.particlesJS) {

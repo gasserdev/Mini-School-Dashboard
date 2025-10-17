@@ -9,11 +9,12 @@ export default function Contact() {
 
   const main = document.createElement('main');
   main.innerHTML = `
-    <div class="container py-5">
+    <div class="container text-center py-5">
       <h2>Contact Us</h2>
       <p class="lead mb-4">Feel free to reach out to us!</p>
 
       <div class="contacts d-flex flex gap-4">
+      <div id="particles-js" class="position-absolute top-0 start-0 w-100 h-100" style="z-index:-1;"></div>
 
         <div class="contact-card p-3 border rounded shadow-sm">
           <div class="avatar bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width:50px;height:50px;">P1</div>
@@ -44,10 +45,8 @@ export default function Contact() {
       </div>
     </div>
   `;
-
   document.body.append(main);
 
-  // Add copy-to-clipboard functionality
   main.querySelectorAll('button[data-phone]').forEach(btn => {
     btn.addEventListener('click', () => {
       const phone = btn.getAttribute('data-phone');
@@ -58,4 +57,32 @@ export default function Contact() {
       });
     });
   });
+  if (!window.particlesJS) {
+    const particlesScript = document.createElement('script');
+    particlesScript.src = 'https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js';
+    particlesScript.onload = () => initParticles();
+    document.head.append(particlesScript);
+  } else {
+    initParticles();
+  }
+
+
+  function initParticles() {
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 900 } },
+        color: { value: '#007bff' },
+        shape: { type: 'polygon' },
+        opacity: { value: 0.6 },
+        size: { value: 25 },
+        line_linked: { enable: true, distance: 150, color: '#007bff', opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 3 }
+      },
+      interactivity: {
+        events: { onhover: { enable: false }, onclick: { enable: false } }
+      },
+      retina_detect: true
+    });
+  }
+
 }

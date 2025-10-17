@@ -12,7 +12,7 @@ export default function Header(title = 'Edu School') {
 
         <div class="collapse navbar-collapse d-none d-lg-flex" id="mainNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
             <li class="nav-item"><a class="nav-link active" href="/services">Services</a></li>
             <li class="nav-item"><a class="nav-link active" href="/contact">Contact</a></li>
             <li class=""><a class=" btn btn-danger p-2 mx-3 text-light" href="/login">Login</a></li>
