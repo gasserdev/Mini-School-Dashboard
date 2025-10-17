@@ -26,5 +26,10 @@ page('/services', async () => {
   await import("/src/javascript/pages/services.js").then(module => module.default());
   Services();
 });
+page('/bus', async () => {
+  document.body.innerHTML = '';
+  await import("/src/javascript/pages/bus.js").then(module => module.default());
+  Bus();
+});
 
 page();

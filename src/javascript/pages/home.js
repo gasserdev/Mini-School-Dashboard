@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '/src/css/home.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-
 export default function Home() {
   if (!sessionStorage.getItem('login_refreshed')) {
     sessionStorage.setItem('login_refreshed', 'true');
@@ -12,34 +11,41 @@ export default function Home() {
   } else {
     sessionStorage.removeItem('login_refreshed');
   }
+
   document.body.innerHTML = '';
   document.body.prepend(Header());
 
   const main = document.createElement('main');
   main.innerHTML = `
-    <section id="home"  class="hero  py-5 position-relative text-white">
+    <section id="home" class="hero py-5 position-relative text-white" style="min-height:100vh;">
       <div id="particles-js" class="position-absolute top-0 start-0 w-100 h-100" style="z-index:0;"></div>
       <div class="container hero-content text-center position-relative" style="z-index:1;">
         <h1 class="display-5 fw-bold">Welcome to Edu School</h1>
         <p class="lead text-center text-light mb-4">
           We provide exceptional education that prepares students for a bright and successful future, inspired by the values of leadership.
         </p>
-        <a href="#about" class="cta-button btn btn-primary btn-lg">Learn More</a>
+        <a href="#about" id="learnMoreBtn" class="cta-button btn btn-primary btn-lg">Learn More</a>
       </div>
     </section>
-    <section id="about" class="section py-5 bg-light">
-        <div class="">
-            <h2 class="">About Our School</h2>
-            <p class="text-secondary">
-            Since its establishment, Edu School has been dedicated to providing a top-quality education that nurtures creativity, critical thinking, and personal growth.
-            Our teachers strive to create a supportive and inspiring environment where every student can reach their full potential.
-            We focus on academic excellence while promoting values such as respect, responsibility, and teamwork, preparing our students to succeed in the modern world.
-            </p>
-        </div>
-    </section>
 
+    <section id="about" class="section py-5 bg-light d-flex justify-center align-center" style="min-height:100vh;">
+      <div class="container">
+        <h2 class="fw-bold mb-3  mt-5 text-primary">About Our School</h2>
+        <p class="text-secondary">
+          Since its establishment, Edu School has been dedicated to providing a top-quality education that nurtures creativity, critical thinking, and personal growth.
+          Our teachers strive to create a supportive and inspiring environment where every student can reach their full potential.
+          We focus on academic excellence while promoting values such as respect, responsibility, and teamwork, preparing our students to succeed in the modern world.
+        </p>
+      </div>
+    </section>
   `;
   document.body.append(main);
+
+  const learnMoreBtn = document.getElementById('learnMoreBtn');
+  learnMoreBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+  });
 
   if (!window.particlesJS) {
     const particlesScript = document.createElement('script');
